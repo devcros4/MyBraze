@@ -13,9 +13,15 @@
 		EDA0DA8829A938A6000F66C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDA0DA8629A938A6000F66C8 /* Main.storyboard */; };
 		EDA0DA8A29A938A8000F66C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDA0DA8929A938A8000F66C8 /* Assets.xcassets */; };
 		EDA0DA8D29A938A8000F66C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDA0DA8B29A938A8000F66C8 /* LaunchScreen.storyboard */; };
+		EDA0DA9629A93935000F66C8 /* BrazeKit in Frameworks */ = {isa = PBXBuildFile; productRef = EDA0DA9529A93935000F66C8 /* BrazeKit */; };
+		EDA0DA9829A93935000F66C8 /* BrazeNotificationService in Frameworks */ = {isa = PBXBuildFile; productRef = EDA0DA9729A93935000F66C8 /* BrazeNotificationService */; };
+		EDA0DA9A29A93935000F66C8 /* BrazePushStory in Frameworks */ = {isa = PBXBuildFile; productRef = EDA0DA9929A93935000F66C8 /* BrazePushStory */; };
+		EDA0DA9C29A93935000F66C8 /* BrazeUI in Frameworks */ = {isa = PBXBuildFile; productRef = EDA0DA9B29A93935000F66C8 /* BrazeUI */; };
+		EDF50D5929A93E7600363A57 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF50D5829A93E7600363A57 /* AuthenticationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED44EE6129AE807600F2EA1B /* MyBraze.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyBraze.entitlements; sourceTree = "<group>"; };
 		EDA0DA7D29A938A6000F66C8 /* MyBraze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBraze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA0DA8029A938A6000F66C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDA0DA8229A938A6000F66C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +30,7 @@
 		EDA0DA8929A938A8000F66C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDA0DA8C29A938A8000F66C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDA0DA8E29A938A8000F66C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDF50D5829A93E7600363A57 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDA0DA9829A93935000F66C8 /* BrazeNotificationService in Frameworks */,
+				EDA0DA9C29A93935000F66C8 /* BrazeUI in Frameworks */,
+				EDA0DA9A29A93935000F66C8 /* BrazePushStory in Frameworks */,
+				EDA0DA9629A93935000F66C8 /* BrazeKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +67,9 @@
 		EDA0DA7F29A938A6000F66C8 /* MyBraze */ = {
 			isa = PBXGroup;
 			children = (
+				ED44EE6129AE807600F2EA1B /* MyBraze.entitlements */,
 				EDA0DA8029A938A6000F66C8 /* AppDelegate.swift */,
+				EDF50D5829A93E7600363A57 /* AuthenticationManager.swift */,
 				EDA0DA8229A938A6000F66C8 /* SceneDelegate.swift */,
 				EDA0DA8429A938A6000F66C8 /* ViewController.swift */,
 				EDA0DA8629A938A6000F66C8 /* Main.storyboard */,
@@ -83,6 +96,12 @@
 			dependencies = (
 			);
 			name = MyBraze;
+			packageProductDependencies = (
+				EDA0DA9529A93935000F66C8 /* BrazeKit */,
+				EDA0DA9729A93935000F66C8 /* BrazeNotificationService */,
+				EDA0DA9929A93935000F66C8 /* BrazePushStory */,
+				EDA0DA9B29A93935000F66C8 /* BrazeUI */,
+			);
 			productName = MyBraze;
 			productReference = EDA0DA7D29A938A6000F66C8 /* MyBraze.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +130,9 @@
 				Base,
 			);
 			mainGroup = EDA0DA7429A938A6000F66C8;
+			packageReferences = (
+				EDA0DA9429A93935000F66C8 /* XCRemoteSwiftPackageReference "braze-swift-sdk" */,
+			);
 			productRefGroup = EDA0DA7E29A938A6000F66C8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDA0DA8529A938A6000F66C8 /* ViewController.swift in Sources */,
+				EDF50D5929A93E7600363A57 /* AuthenticationManager.swift in Sources */,
 				EDA0DA8129A938A6000F66C8 /* AppDelegate.swift in Sources */,
 				EDA0DA8329A938A6000F66C8 /* SceneDelegate.swift in Sources */,
 			);
@@ -285,9 +308,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MyBraze/MyBraze.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TS6475UR22;
+				DEVELOPMENT_TEAM = Z45WA4MSEP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyBraze/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -300,8 +325,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = devcros.MyBraze;
+				PRODUCT_BUNDLE_IDENTIFIER = lapresse.ca.MyBraze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -313,9 +339,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MyBraze/MyBraze.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TS6475UR22;
+				DEVELOPMENT_TEAM = Z45WA4MSEP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyBraze/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -328,8 +356,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = devcros.MyBraze;
+				PRODUCT_BUNDLE_IDENTIFIER = lapresse.ca.MyBraze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -358,6 +387,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EDA0DA9429A93935000F66C8 /* XCRemoteSwiftPackageReference "braze-swift-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/braze-inc/braze-swift-sdk";
+			requirement = {
+				kind = exactVersion;
+				version = 5.10.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EDA0DA9529A93935000F66C8 /* BrazeKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDA0DA9429A93935000F66C8 /* XCRemoteSwiftPackageReference "braze-swift-sdk" */;
+			productName = BrazeKit;
+		};
+		EDA0DA9729A93935000F66C8 /* BrazeNotificationService */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDA0DA9429A93935000F66C8 /* XCRemoteSwiftPackageReference "braze-swift-sdk" */;
+			productName = BrazeNotificationService;
+		};
+		EDA0DA9929A93935000F66C8 /* BrazePushStory */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDA0DA9429A93935000F66C8 /* XCRemoteSwiftPackageReference "braze-swift-sdk" */;
+			productName = BrazePushStory;
+		};
+		EDA0DA9B29A93935000F66C8 /* BrazeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDA0DA9429A93935000F66C8 /* XCRemoteSwiftPackageReference "braze-swift-sdk" */;
+			productName = BrazeUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EDA0DA7529A938A6000F66C8 /* Project object */;
 }
